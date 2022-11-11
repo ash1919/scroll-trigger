@@ -1,16 +1,13 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+.hero_bg {
+  background-image: url("/images/neural-bg.jpeg");
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: contain;
+  width: 100vw;
+  opacity: 0.8;
+  height: 100vh;
 }
