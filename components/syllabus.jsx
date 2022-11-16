@@ -27,12 +27,11 @@ const Syllabus = () => {
               // toggleActions: "play none none none",
               // markers: true,
               start: "top center",
-              end: "bottom 100%",
+              end: "+=150px",
               scrub: 1,
               smoothChildTiming: true,
             },
             scale: 0,
-
             ease: "ease",
             duration: 3,
           })
@@ -42,14 +41,13 @@ const Syllabus = () => {
               // toggleActions: "play none none none",
               // markers: true,
               start: "top center",
-              end: "bottom 100%",
+              end: "+=150px",
               scrub: 1,
               smoothChildTiming: true,
             },
             duration: 3,
             scale: 1.2,
-            autoAlpha: 1,
-            ease: "power2.in",
+            ease: "slow(0.7, 0.7, false)",
           })
           .from(`#${item.id}`, {
             scrollTrigger: {
@@ -58,15 +56,13 @@ const Syllabus = () => {
               // markers: true,
               scrub: 1,
               start: "top center",
-              end: "bottom 100%",
+              end: "+=150px",
               smoothChildTiming: true,
             },
-            x: 0,
-            // opacity: 0,
-            color: "grey",
+            opacity: 0.2,
             duration: 3,
             scale: 0.8,
-            ease: "power2.in",
+            ease: "slow(0.7, 0.7, false)",
           })
           .to(`#${item.id}`, {
             scrollTrigger: {
@@ -74,14 +70,12 @@ const Syllabus = () => {
               // toggleActions: "play none none none",
               markers: true,
               start: "top center",
-              end: "bottom 100%",
+              end: "+=150px",
               scrub: 1,
               smoothChildTiming: true,
             },
-            x: 0,
-            opacity: 1,
             duration: 3,
-            color: "white",
+            color: "#ffff",
             scale: 1,
             ease: "slow(0.7, 0.7, false)",
           })
@@ -91,7 +85,7 @@ const Syllabus = () => {
               // toggleActions: "play none none none",
               // markers: true,
               start: "top center",
-              end: "bottom 100%",
+              end: "+=150px",
               scrub: 1,
               smoothChildTiming: true,
             },
@@ -107,7 +101,7 @@ const Syllabus = () => {
               // toggleActions: "play none none none",
               // markers: true,
               start: "top center",
-              end: "bottom 100%",
+              end: "+=150px",
               scrub: 1,
               smoothChildTiming: true,
             },
@@ -165,7 +159,7 @@ const Syllabus = () => {
             {courseData.map((item) => (
               <div
                 ref={container}
-                className="ml-6 text-white flex flex-col items-start gap-y-10 justify-center"
+                className="ml-6 flex flex-col items-start gap-y-10 justify-center"
                 key={item.id}
               >
                 <div>
@@ -178,7 +172,7 @@ const Syllabus = () => {
                   />
                   <p
                     id={item.id}
-                    className={`text-3xl font-semibold heading text-gray-400`}
+                    className="text-3xl font-semibold heading text-gray-400 opacity-100"
                   >
                     {item.title}{" "}
                   </p>
